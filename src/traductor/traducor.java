@@ -1,12 +1,15 @@
 package traductor;
+
 /**
  *
  * @author esteban
  */
 public class traducor extends javax.swing.JFrame {
+
     public traducor() {
         initComponents();
     }
+
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -64,13 +67,21 @@ public class traducor extends javax.swing.JFrame {
         txtPalabra.setText("");
         txtTraductor.setText("");
         txtPalabra.requestFocus();
-        
     }//GEN-LAST:event_btnClearActionPerformed
 
     private void txtPalabraKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtPalabraKeyPressed
-        char palabra = evt.getKeyChar();
-        String salida  = txtTraductor.getText()+ String.valueOf(palabra);
-        txtTraductor.setText(salida);          
+        
+        char palabra = evt.getKeyChar(); //palabra es igual a lo que se obtiene en el tet box "evt.getKeyChar" reconoce la letra orpimida
+        switch (palabra) {    // switch son si anidados
+            case 'A' |'a':
+                String salida = txtTraductor.getText() +"njknkj";// pregunta que hay en la caja de texto a eso agrege  lo que despues de mas
+                txtTraductor.setText(salida); // agrega a la caja de texto
+                break;
+            default: 
+                System.out.println("hola mundo");
+                break;
+        }
+      
     }//GEN-LAST:event_txtPalabraKeyPressed
 
     /**
